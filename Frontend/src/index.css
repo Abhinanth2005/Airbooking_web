@@ -1,0 +1,743 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #21cada;
+    color: #222;
+}
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h2 {
+    margin-bottom: 10px;
+}
+
+.auth-card > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 12px;
+    background: #1769aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.auth-card button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.auth-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.auth-link a {
+    color: #1769aa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.alert {
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    white-space: pre-line;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.alert-success {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+
+.trips-list {
+    display: grid;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.trip-card {
+    padding: 22px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+}
+
+.trip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-badge.paid {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.failed {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.booking-details {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.success-message {
+    padding: 12px;
+    margin: 15px 0;
+    color: #166534;
+    background: #dcfce7;
+    border-radius: 6px;
+}
+
+.empty-state {
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.admin-section {
+    margin-top: 35px;
+}
+
+.admin-section h2 {
+    margin-bottom: 18px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+th {
+    background: #f1f5f9;
+}
+
+.approve-btn,
+.reject-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.approve-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.reject-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.admin-section select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking-alert {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.booking-alert.success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+.booking-alert.failure {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Main content */
+/* .main-content {
+    min-height: calc(100vh - 130px);
+} */
+
+.page-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.page-container h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.page-container > p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Navbar */
+.navbar {
+    background: #0f172a;
+    color: white;
+    padding: 16px 0;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Buttons */
+.primary-btn,
+.secondary-btn,
+.search-form button,
+.flight-card button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.primary-btn,
+.search-form button,
+.flight-card button {
+    background: #2563eb;
+    color: white;
+}
+
+.primary-btn:hover,
+.search-form button:hover,
+.flight-card button:hover {
+    background: #1d4ed8;
+}
+
+.secondary-btn {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.secondary-btn:hover {
+    background: #cbd5e1;
+}
+
+/* Dashboard */
+
+
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1e293b;
+    transition: 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    border-color: #2563eb;
+}
+
+.dashboard-card span {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Flight search */
+.search-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto auto;
+    gap: 12px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.search-form input,
+.booking-card input,
+.booking-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+}
+
+.search-form input:focus,
+.booking-card input:focus,
+.booking-card select:focus {
+    border-color: #2563eb;
+}
+
+.flight-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 22px;
+}
+
+.flight-card,
+.details-card,
+.booking-card,
+.trip-card {
+    background: white;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.flight-card h3 {
+    margin-top: 0;
+}
+
+.flight-card p,
+.details-card p,
+.booking-card p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Flight details */
+.details-card {
+    max-width: 800px;
+    margin: 25px auto;
+}
+
+.flight-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.route-arrow {
+    font-size: 30px;
+    color: #2563eb;
+}
+
+/* Booking */
+.booking-card {
+    max-width: 650px;
+    margin: 25px auto;
+}
+
+.booking-card label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: 600;
+}
+
+.booking-card button {
+    margin-top: 20px;
+}
+
+/* My Trips */
+.trips-list {
+    display: grid;
+    gap: 20px;
+}
+
+.trip-card {
+    width: 100%;
+}
+
+.trip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-badge.paid {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.failed {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Admin */
+.admin-section {
+    margin-top: 40px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+th {
+    background: #f1f5f9;
+}
+
+.approve-btn,
+.reject-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-right: 6px;
+}
+
+.approve-btn {
+    background: #16a34a;
+}
+
+.reject-btn {
+    background: #dc2626;
+}
+
+/* Alerts */
+.error-message,
+.booking-alert.failure {
+    color: maroon;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.success-message,
+.booking-alert.success {
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #86efac;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .search-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-container,
+    .dashboard-container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .page-container h1 {
+        font-size: 25px;
+    }
+
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .flight-route {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .route-arrow {
+        transform: rotate(90deg);
+    }
+
+    .trip-header,
+    .flight-results-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dashboard-grid,
+    .flight-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.home-container {
+    min-height: 70vh;
+    /* border: #16a34a 4px solid; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    /* padding: 40px 20px; */
+    margin:0%;
+}
+
+
+
+
+.danger-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.2s;
+}
+
+.danger-btn:hover {
+    background-color: #bb2d3b;
+}
+
+.danger-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.status-badge.cancelled {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.status-badge.confirmed {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.flight-form {
+    margin-top: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

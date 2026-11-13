@@ -1,0 +1,693 @@
+/* HOME PAGE */
+
+.home-container {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 5%;
+    background: #f4f8ff;
+    background: linear-gradient(120deg, #1255ad, #b4defe, #bbcfe0fb);
+    
+}
+
+.hero-section {
+    width: 100%;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 25px;
+       
+}
+
+.hero-content {
+    max-width: 100%;
+}
+
+.hero-section .hero-subtitle {
+    color: hsl(256, 95%, 48%) !important;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    font-size: 58px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero-section h1 span {
+    color: #0e0d0dd4;
+}
+
+.hero-section .hero-description {
+    color: #ffffff !important;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0 auto 35px;
+    max-width: 700px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 38px;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #1262bd;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #e5f2ff;
+    color: #084b99;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 430px;
+        padding: 40px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-section .hero-description {
+        font-size: 15px;
+        color: #082bee !important;
+    }
+}
+
+
+
+/* DASHBOARD PAGE */
+
+.dashboard-container {
+    min-height: 75vh;
+    padding:4%;
+    padding-right: 5%;
+    background: linear-gradient(
+        120deg,
+        #1255ad,
+        #b4defe,
+        #bbcfe0fb
+    );
+}
+
+.dashboard-container h1 {
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.dashboard-container > p {
+    color: #f5faff;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+/* DASHBOARD CARDS */
+
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(13, 71, 161, 0.10);
+    transition: 0.3s ease;
+    margin-top: 50px;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(13, 71, 161, 0.18);
+}
+
+.dashboard-card h2 {
+    color: #123b70;
+    font-size: 26px;
+}
+
+.dashboard-card p {
+    color: #52657c;
+    font-size: 16px;
+}
+
+.dashboard-card a {
+    color: #1262bd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.dashboard-card a:hover {
+    color: #0d47a1;
+}
+
+
+/* MY TRIPS PAGE */
+
+.my-trips-page {
+    min-height: 75vh;
+    padding: 45px 7%;
+    background: linear-gradient(
+        120deg,
+        #1255ad,
+        #b4defe,
+        #bbcfe0fb
+    );
+}
+
+.my-trips-page > h1 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.my-trips-page > p {
+    color: #f5faff;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* TRIPS LIST */
+
+.trips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.trip-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 25px rgba(13, 71, 161, 0.12);
+    transition: 0.3s ease;
+}
+
+.trip-card:hover {
+    box-shadow: 0 12px 30px rgba(13, 71, 161, 0.2);
+    transform: translateY(-3px);
+}
+
+.trip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.trip-header h3 {
+    color: #123b70;
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.trip-card > p {
+    color: #52657c;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.trip-card strong {
+    color: #183b63;
+}
+
+/* STATUS BADGES */
+
+.status-badge {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge.paid,
+.status-badge.confirmed {
+    background: #d9f7e5;
+    color: #167342;
+}
+
+.status-badge.pending {
+    background: #fff2cc;
+    color: #946200;
+}
+
+.status-badge.failed,
+.status-badge.cancelled {
+    background: #ffe0e0;
+    color: #b42318;
+}
+
+/* BUTTONS */
+
+.my-trips-page .secondary-btn,
+.my-trips-page .danger-btn {
+    border: none;
+    padding: 10px 19px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 8px 8px 0 0;
+    transition: 0.3s ease;
+}
+
+.my-trips-page .secondary-btn {
+    background: linear-gradient(120deg, #1565c0, #2196f3);
+    color: #ffffff;
+}
+
+.my-trips-page .secondary-btn:hover {
+    background: #0d47a1;
+}
+
+.my-trips-page .danger-btn {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+.my-trips-page .danger-btn:hover {
+    background: #b02a37;
+}
+
+.my-trips-page button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* BOOKING DETAILS */
+
+.booking-details {
+    margin-top: 22px;
+    padding: 20px;
+    background: #edf6ff;
+    border: 1px solid #d2e6fa;
+    border-radius: 10px;
+}
+
+.booking-details h4 {
+    color: #1255ad;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.booking-details p {
+    color: #52657c;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(13, 71, 161, 0.1);
+}
+
+.empty-state h3 {
+    color: #123b70;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #52657c;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .my-trips-page {
+        padding: 30px 5%;
+    }
+
+    .my-trips-page > h1 {
+        font-size: 29px;
+    }
+
+    .trip-card {
+        padding: 20px;
+    }
+
+    .trip-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* FLIGHT SEARCH PAGE */
+
+.flight-search-page {
+    min-height: 75vh;
+    padding: 45px 7%;
+    background: linear-gradient(
+        120deg,
+        #1255ad,
+        #b4defe,
+        #bbcfe0fb
+    );
+}
+
+.flight-search-page > h1 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.flight-search-page > p {
+    color: #f5faff;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* SEARCH FORM */
+
+.flight-search-page .search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px;
+    margin-bottom: 35px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(13, 71, 161, 0.12);
+}
+
+.flight-search-page .search-form input {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px 15px;
+    border: 1px solid #d5e3f2;
+    border-radius: 7px;
+    outline: none;
+    color: #263d59;
+    background: #ffffff;
+}
+
+.flight-search-page .search-form input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.12);
+}
+
+.flight-search-page .search-form button,
+.flight-search-page .flight-card button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    background: linear-gradient(120deg, #1565c0, #2196f3);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.flight-search-page .search-form button:hover,
+.flight-search-page .flight-card button:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+.flight-search-page .search-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.flight-search-page .search-form .secondary-btn {
+    background: #e8f2ff;
+    color: #1565c0;
+    border: 1px solid #c8def5;
+}
+
+.flight-search-page .search-form .secondary-btn:hover {
+    background: #d5e9ff;
+}
+
+/* RESULTS HEADER */
+
+.flight-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.flight-results-header h2 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.flight-results-header span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* FLIGHT CARDS */
+
+.flight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.flight-card {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(13, 71, 161, 0.12);
+    transition: 0.3s ease;
+}
+
+.flight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(13, 71, 161, 0.2);
+}
+
+.flight-card h3 {
+    color: #1255ad;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.flight-card p {
+    color: #52657c;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.flight-card strong {
+    color: #183b63;
+}
+
+.flight-card button {
+    margin-top: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .flight-search-page {
+        padding: 30px 5%;
+    }
+
+    .flight-search-page > h1 {
+        font-size: 29px;
+    }
+
+    .flight-search-page .search-form {
+        padding: 18px;
+    }
+
+    .flight-search-page .search-form input,
+    .flight-search-page .search-form button {
+        width: 100%;
+    }
+}
+
+.error-message{
+    color:maroon;
+    background: #fee2e2;
+}
+
+.flight-search-page p{
+    color: #090909;
+}
+
+.my-trips-page p{
+    color: #090909;
+}
+
+/* FLIGHT DETAILS PAGE */
+
+.flight-details-page {
+    min-height: 75vh;
+    padding: 45px 7%;
+    background: linear-gradient(
+        120deg,
+        #1255ad,
+        #b4defe,
+        #bbcfe0fb
+    );
+}
+
+.flight-details-page > h1 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* DETAILS CARD */
+
+.details-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(13, 71, 161, 0.14);
+}
+
+.details-card > h2 {
+    color: #1255ad;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.details-card > h3 {
+    color: #60758d;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* FLIGHT ROUTE */
+
+.flight-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 15px;
+    margin-bottom: 25px;
+    background: #edf6ff;
+    border-radius: 12px;
+}
+
+.flight-route > div:not(.route-arrow) {
+    flex: 1;
+    text-align: center;
+}
+
+.flight-route h2 {
+    color: #1255ad;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.flight-route p {
+    color: #52657c;
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.route-arrow {
+    color: #2196f3;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.details-card hr {
+    border-color: #d5e3f2;
+    margin: 25px 0;
+}
+
+.details-card > p {
+    color: #52657c;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.details-card > p strong {
+    color: #183b63;
+}
+
+/* BOOK NOW BUTTON */
+
+.flight-details-page .primary-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(120deg, #1565c0, #2196f3);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.flight-details-page .primary-btn:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+.flight-details-page .error-message {
+    color: #b42318;
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .flight-details-page {
+        padding: 30px 5%;
+    }
+
+    .details-card {
+        padding: 22px;
+    }
+
+    .flight-route {
+        gap: 10px;
+        padding: 20px 8px;
+    }
+
+    .flight-route h2 {
+        font-size: 21px;
+    }
+
+    .route-arrow {
+        font-size: 23px;
+    }
+}
